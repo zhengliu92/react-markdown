@@ -1,5 +1,10 @@
 # React Markdown Renderer
 
+[![npm version](https://badge.fury.io/js/markdown-renderer-react.svg)](https://badge.fury.io/js/markdown-renderer-react)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-blue.svg)](https://zhengliu92.github.io/react-markdown)
+
 一个功能强大、可定制的 React Markdown 渲染组件，支持语法高亮、数学公式、HTML 渲染和多种主题样式。
 
 [English](README.md) | 中文
@@ -138,6 +143,8 @@ npm run type-check
 ```
 
 ## 📖 文档
+
+**🌐 在线演示**: [https://zhengliu92.github.io/react-markdown](https://zhengliu92.github.io/react-markdown)
 
 运行 Storybook 查看完整的组件文档和示例：
 

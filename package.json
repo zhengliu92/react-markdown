@@ -21,7 +21,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "description": "一个功能强大、可定制的 React Markdown 渲染组件，支持语法高亮、数学公式、HTML 渲染和多种主题样式。",
   "repository": {
     "type": "git",

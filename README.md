@@ -1,5 +1,10 @@
 # React Markdown Renderer
 
+[![npm version](https://badge.fury.io/js/markdown-renderer-react.svg)](https://badge.fury.io/js/markdown-renderer-react)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-blue.svg)](https://zhengliu92.github.io/react-markdown)
+
 A powerful, customizable React Markdown rendering component with syntax highlighting, math formulas, HTML rendering, and multiple theme styles.
 
 English | [中文](README-zh.md)
@@ -138,6 +143,8 @@ npm run type-check
 ```
 
 ## 📖 Documentation
+
+**🌐 Live Demo**: [https://zhengliu92.github.io/react-markdown](https://zhengliu92.github.io/react-markdown)
 
 Run Storybook to view complete component documentation and examples:
 
