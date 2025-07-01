@@ -52,6 +52,20 @@ export const useMarkdownStyles = ({
           padding: styleConfig.codeBlock.padding,
           fontSize: styleConfig.codeBlock.fontSize,
           fontFamily: styleConfig.codeBlock.fontFamily,
+          margin: styleConfig.codeBlock.margin,
+          border: styleConfig.codeBlock.border,
+          borderLeft: styleConfig.codeBlock.borderLeft,
+          borderRight: styleConfig.codeBlock.borderRight,
+          borderTop: styleConfig.codeBlock.borderTop,
+          borderBottom: styleConfig.codeBlock.borderBottom,
+          boxShadow: styleConfig.codeBlock.boxShadow,
+          lineHeight: styleConfig.codeBlock.lineHeight,
+          color: styleConfig.codeBlock.color,
+          width: styleConfig.codeBlock.width,
+          maxWidth: styleConfig.codeBlock.maxWidth,
+          overflow: styleConfig.codeBlock.overflow,
+          position: styleConfig.codeBlock.position,
+          backgroundImage: styleConfig.codeBlock.backgroundImage,
         }
       : {};
   }, [styleConfig]);
@@ -66,6 +80,10 @@ export const useMarkdownStyles = ({
           borderRadius: styleConfig.inlineCode.borderRadius,
           fontSize: styleConfig.inlineCode.fontSize,
           fontFamily: styleConfig.inlineCode.fontFamily,
+          border: styleConfig.inlineCode.border,
+          boxShadow: styleConfig.inlineCode.boxShadow,
+          margin: styleConfig.inlineCode.margin,
+          lineHeight: styleConfig.inlineCode.lineHeight,
         }
       : {};
   }, [styleConfig]);
@@ -79,6 +97,14 @@ export const useMarkdownStyles = ({
           fontStyle: styleConfig.blockquote.fontStyle,
           backgroundColor: styleConfig.blockquote.backgroundColor,
           margin: styleConfig.blockquote.margin,
+          padding: styleConfig.blockquote.padding,
+          borderRadius: styleConfig.blockquote.borderRadius,
+          border: styleConfig.blockquote.border,
+          boxShadow: styleConfig.blockquote.boxShadow,
+          color: styleConfig.blockquote.color,
+          fontSize: styleConfig.blockquote.fontSize,
+          fontFamily: styleConfig.blockquote.fontFamily,
+          lineHeight: styleConfig.blockquote.lineHeight,
         }
       : {};
   }, [styleConfig]);

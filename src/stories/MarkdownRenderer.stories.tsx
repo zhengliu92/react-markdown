@@ -886,6 +886,115 @@ $$`,
   },
 };
 
+// 扩展样式功能测试
+export const ExtendedStylesTest: Story = {
+  args: {
+    content: `# 🎨 扩展样式功能测试
+
+这个示例展示了新增的所有样式属性功能。
+
+## 代码块样式测试
+
+\`\`\`javascript
+function advancedStyling() {
+  console.log("这个代码块展示了扩展的样式功能");
+  console.log("包括 boxShadow、border、margin 等");
+  return "强大的样式控制！";
+}
+
+// 支持的新属性：
+// - boxShadow: 阴影效果
+// - border: 完整边框控制  
+// - margin: 外边距
+// - lineHeight: 行高
+// - width/maxWidth: 宽度控制
+// - overflow: 溢出处理
+\`\`\`
+
+## 行内代码样式
+
+这里有一些 \`行内代码示例\` 和 \`更多测试代码\` 来展示新的样式功能。
+
+## 引用块样式测试
+
+> 🌟 这是一个引用块，现在支持更多样式属性
+> 
+> 包括 boxShadow、borderRadius、完整的 padding 控制等
+> 
+> 你可以创建更加精美的引用块样式！
+
+## 多样化的样式组合
+
+\`\`\`python
+# Python 代码块也支持所有新样式
+def create_beautiful_code_block():
+    """
+    现在可以设置：
+    - 阴影效果 (boxShadow)
+    - 多种边框样式 (border, borderLeft等)
+    - 渐变背景 (backgroundImage)
+    - 完整的间距控制 (margin, padding)
+    """
+    return "Amazing styling capabilities!"
+\`\`\``,
+    styleConfig: {
+      backgroundColor: "#ffffff",
+      color: "#333333",
+      padding: "32px",
+      fontFamily: "'Inter', -apple-system, sans-serif",
+      codeBlock: {
+        backgroundColor: "#f8f9fa",
+        borderRadius: "12px",
+        padding: "20px",
+        fontSize: "14px",
+        fontFamily: "'JetBrains Mono', monospace",
+        // 🎉 新增的样式属性
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+        border: "1px solid #e9ecef",
+        borderLeft: "4px solid #007acc",
+        margin: "16px 0",
+        lineHeight: "1.6",
+        overflow: "auto",
+      },
+      inlineCode: {
+        backgroundColor: "#f1f3f4",
+        color: "#d63384",
+        padding: "3px 8px",
+        borderRadius: "6px",
+        fontSize: "0.9em",
+        fontFamily: "'JetBrains Mono', monospace",
+        // 🎉 新增的样式属性
+        border: "1px solid #dee2e6",
+        boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)",
+        margin: "0 2px",
+      },
+      blockquote: {
+        borderLeft: "4px solid #007acc",
+        paddingLeft: "20px",
+        backgroundColor: "#f8f9fa",
+        margin: "20px 0",
+        fontStyle: "italic",
+        // 🎉 新增的样式属性
+        padding: "16px 20px",
+        borderRadius: "8px",
+        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.05)",
+        border: "1px solid #e9ecef",
+        color: "#495057",
+        fontSize: "16px",
+        lineHeight: "1.7",
+      },
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "展示扩展的样式属性功能，包括 boxShadow、border、margin 等新增的CSS属性支持。",
+      },
+    },
+  },
+};
+
 // 测试代码块背景色功能
 export const CodeBlockBackgroundTest: Story = {
   args: {

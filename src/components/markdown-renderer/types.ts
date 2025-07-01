@@ -54,6 +54,20 @@ export interface MarkdownStyleConfig {
     padding?: string;
     fontSize?: string;
     fontFamily?: string;
+    margin?: string;
+    border?: string;
+    borderLeft?: string;
+    borderRight?: string;
+    borderTop?: string;
+    borderBottom?: string;
+    boxShadow?: string;
+    lineHeight?: string | number;
+    color?: string;
+    width?: string;
+    maxWidth?: string;
+    overflow?: string;
+    position?: string;
+    backgroundImage?: string;
   };
   /**
    * 行内代码样式配置
@@ -65,6 +79,10 @@ export interface MarkdownStyleConfig {
     borderRadius?: string;
     fontSize?: string;
     fontFamily?: string;
+    border?: string;
+    boxShadow?: string;
+    margin?: string;
+    lineHeight?: string | number;
   };
   /**
    * 引用块样式配置
@@ -75,6 +93,14 @@ export interface MarkdownStyleConfig {
     fontStyle?: string;
     backgroundColor?: string;
     margin?: string;
+    padding?: string;
+    borderRadius?: string;
+    border?: string;
+    boxShadow?: string;
+    color?: string;
+    fontSize?: string;
+    fontFamily?: string;
+    lineHeight?: string | number;
   };
 }
 
