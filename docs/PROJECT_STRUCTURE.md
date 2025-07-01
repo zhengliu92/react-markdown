@@ -11,9 +11,7 @@ react-markdown/
 │   └── preview.ts          # 预览配置
 ├── dist/                   # 构建输出目录
 ├── scripts/                # 构建和工具脚本
-│   ├── clean-css-imports.js
-│   ├── diagnose-react19-issue.js
-│   └── generate-react19-config.js
+│   └── clean-css-imports.js
 ├── src/                    # 源代码目录
 │   ├── __tests__/          # 测试相关文件
 │   │   ├── index.ts        # 测试工具导出
