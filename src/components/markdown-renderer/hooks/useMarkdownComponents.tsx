@@ -70,6 +70,8 @@ export const useMarkdownComponents = ({
                   backgroundColor: "transparent",
                   margin: 0,
                   padding: 0,
+                  border: "none", // 确保SyntaxHighlighter不覆盖外层border
+                  borderRadius: 0, // 确保内部不显示圆角
                 }}
               >
                 {String(children).replace(/\n$/, "")}

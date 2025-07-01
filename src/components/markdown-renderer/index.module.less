@@ -25,14 +25,10 @@
     font-size: 0.9em;
   }
 
-  // 预格式化代码块 - 降低优先级，让内联样式优先  
+  // 预格式化代码块 - 只保留必要的默认样式，其他交给用户自定义
   :global(pre) {
-    background-color: #f8f8f8;
-    border: 1px solid #e1e1e1;
-    border-radius: 5px;
-    padding: 10px;
+    // 只保留功能性样式，视觉样式交给 styleConfig 控制
     overflow-x: auto;
-    margin: 10px 0;
     
     code {
       background-color: transparent;

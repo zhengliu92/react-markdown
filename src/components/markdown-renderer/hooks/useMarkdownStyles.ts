@@ -45,29 +45,62 @@ export const useMarkdownStyles = ({
 
   // 生成代码块样式
   const codeBlockStyle = useMemo(() => {
-    return styleConfig?.codeBlock
-      ? {
-          backgroundColor: styleConfig.codeBlock.backgroundColor,
-          borderRadius: styleConfig.codeBlock.borderRadius,
-          padding: styleConfig.codeBlock.padding,
-          fontSize: styleConfig.codeBlock.fontSize,
-          fontFamily: styleConfig.codeBlock.fontFamily,
-          margin: styleConfig.codeBlock.margin,
-          border: styleConfig.codeBlock.border,
-          borderLeft: styleConfig.codeBlock.borderLeft,
-          borderRight: styleConfig.codeBlock.borderRight,
-          borderTop: styleConfig.codeBlock.borderTop,
-          borderBottom: styleConfig.codeBlock.borderBottom,
-          boxShadow: styleConfig.codeBlock.boxShadow,
-          lineHeight: styleConfig.codeBlock.lineHeight,
-          color: styleConfig.codeBlock.color,
-          width: styleConfig.codeBlock.width,
-          maxWidth: styleConfig.codeBlock.maxWidth,
-          overflow: styleConfig.codeBlock.overflow,
-          position: styleConfig.codeBlock.position,
-          backgroundImage: styleConfig.codeBlock.backgroundImage,
-        }
-      : {};
+    const defaultCodeBlockStyle = {
+      backgroundColor: "#f8f8f8",
+      border: "1px solid #e1e1e1",
+      borderRadius: "5px",
+      padding: "10px",
+      margin: "10px 0",
+    };
+
+    if (!styleConfig?.codeBlock) {
+      return defaultCodeBlockStyle;
+    }
+
+    const userCodeBlock = styleConfig.codeBlock;
+    const mergedStyle: any = { ...defaultCodeBlockStyle };
+
+    // 只有当用户明确设置了属性时才覆盖默认值
+    if (userCodeBlock.backgroundColor !== undefined)
+      mergedStyle.backgroundColor = userCodeBlock.backgroundColor;
+    if (userCodeBlock.borderRadius !== undefined)
+      mergedStyle.borderRadius = userCodeBlock.borderRadius;
+    if (userCodeBlock.padding !== undefined)
+      mergedStyle.padding = userCodeBlock.padding;
+    if (userCodeBlock.fontSize !== undefined)
+      mergedStyle.fontSize = userCodeBlock.fontSize;
+    if (userCodeBlock.fontFamily !== undefined)
+      mergedStyle.fontFamily = userCodeBlock.fontFamily;
+    if (userCodeBlock.margin !== undefined)
+      mergedStyle.margin = userCodeBlock.margin;
+    if (userCodeBlock.border !== undefined)
+      mergedStyle.border = userCodeBlock.border;
+    if (userCodeBlock.borderLeft !== undefined)
+      mergedStyle.borderLeft = userCodeBlock.borderLeft;
+    if (userCodeBlock.borderRight !== undefined)
+      mergedStyle.borderRight = userCodeBlock.borderRight;
+    if (userCodeBlock.borderTop !== undefined)
+      mergedStyle.borderTop = userCodeBlock.borderTop;
+    if (userCodeBlock.borderBottom !== undefined)
+      mergedStyle.borderBottom = userCodeBlock.borderBottom;
+    if (userCodeBlock.boxShadow !== undefined)
+      mergedStyle.boxShadow = userCodeBlock.boxShadow;
+    if (userCodeBlock.lineHeight !== undefined)
+      mergedStyle.lineHeight = userCodeBlock.lineHeight;
+    if (userCodeBlock.color !== undefined)
+      mergedStyle.color = userCodeBlock.color;
+    if (userCodeBlock.width !== undefined)
+      mergedStyle.width = userCodeBlock.width;
+    if (userCodeBlock.maxWidth !== undefined)
+      mergedStyle.maxWidth = userCodeBlock.maxWidth;
+    if (userCodeBlock.overflow !== undefined)
+      mergedStyle.overflow = userCodeBlock.overflow;
+    if (userCodeBlock.position !== undefined)
+      mergedStyle.position = userCodeBlock.position;
+    if (userCodeBlock.backgroundImage !== undefined)
+      mergedStyle.backgroundImage = userCodeBlock.backgroundImage;
+
+    return mergedStyle;
   }, [styleConfig]);
 
   // 生成行内代码样式
