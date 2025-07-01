@@ -1,0 +1,51 @@
+# Source files
+src/
+.storybook/
+scripts/
+
+# Development files
+*.stories.tsx
+*.stories.ts
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+__tests__/
+
+# Configuration files
+vite.config.ts
+tsconfig.json
+tsconfig.build.json
+eslint.config.js
+.eslintrc*
+
+# Documentation and examples
+docs/
+examples/
+*.md
+!README.md
+!README-zh.md
+
+# Build tools
+.github/
+.vscode/
+.idea/
+
+# Environment files
+.env*
+
+# Logs
+*.log
+
+# Test coverage
+coverage/
+
+# Temporary files
+tmp/
+temp/
+
+# macOS
+.DS_Store
+
+# Node modules (just in case)
+node_modules/ 

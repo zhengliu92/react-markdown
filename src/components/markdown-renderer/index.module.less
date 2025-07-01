@@ -1,0 +1,128 @@
+.markdownRenderer {
+  // 思考模块样式
+  :global(section.think) {
+    padding-left: 10px;
+    color: #8b8b8b;
+    border-left: 2px solid #d5d3d3;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  // 引用块样式
+  :global(blockquote) {
+    padding-left: 10px;
+    border-left: 4px solid #ccc;
+    margin: 10px 0;
+    color: #666;
+  }
+
+  // 代码块样式
+  :global(code) {
+    background-color: #f5f5f5;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+  }
+
+  // 预格式化代码块
+  :global(pre) {
+    background-color: #f8f8f8;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-x: auto;
+    margin: 10px 0;
+    
+    code {
+      background-color: transparent;
+      padding: 0;
+      font-size: 14px;
+    }
+  }
+
+  // 表格样式
+  :global(table) {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 0;
+    
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  }
+
+  // 标题样式
+  :global(h1, h2, h3, h4, h5, h6) {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  :global(h1) { font-size: 2em; }
+  :global(h2) { font-size: 1.5em; }
+  :global(h3) { font-size: 1.3em; }
+  :global(h4) { font-size: 1.1em; }
+  :global(h5) { font-size: 1em; }
+  :global(h6) { font-size: 0.9em; }
+
+  // 列表样式
+  :global(ul, ol) {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+
+  :global(li) {
+    margin: 5px 0;
+  }
+
+  // 段落样式
+  :global(p) {
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+
+  // 链接样式
+  :global(a) {
+    color: #1890ff;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // 图片样式
+  :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  // 分割线样式
+  :global(hr) {
+    border: none;
+    border-top: 1px solid #e1e1e1;
+    margin: 20px 0;
+  }
+
+  // 数学公式样式
+  :global(.katex) {
+    font-size: 1em;
+  }
+
+  :global(.katex-display) {
+    margin: 15px 0;
+  }
+} 
