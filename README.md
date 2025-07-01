@@ -19,6 +19,7 @@ English | [中文](README-zh.md)
 - 🛡️ **Safe HTML Filtering** - Built-in HTML sanitization with DOMPurify
 - 📱 **Responsive Design** - Adapts to various screen sizes
 - 🎪 **Storybook Documentation** - Complete component examples and documentation
+- ⚡ **Lightweight** - Optimized bundle size (~1.6MB ES module, ~980KB gzipped)
 
 ## 📦 Installation
 

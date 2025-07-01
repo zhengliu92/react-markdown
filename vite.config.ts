@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import { fileURLToPath, URL } from "node:url";
+import { visualizer } from "rollup-plugin-visualizer";
 
 export default defineConfig({
   plugins: [
@@ -11,6 +12,12 @@ export default defineConfig({
       jsxImportSource: undefined,
     }),
     cssInjectedByJsPlugin(),
+    visualizer({
+      filename: "dist/bundle-analysis.html",
+      open: false,
+      gzipSize: true,
+      brotliSize: true,
+    }),
   ],
   resolve: {
     alias: {
@@ -25,37 +32,44 @@ export default defineConfig({
     },
     cssCodeSplit: false,
     rollupOptions: {
-      // 更严格的external配置
-      external: (id, importer) => {
-        // 排除所有React相关的模块
-        if (
-          id === "react" ||
-          id === "react-dom" ||
-          id === "react/jsx-runtime" ||
-          id === "react/jsx-dev-runtime" ||
-          id.startsWith("react/") ||
-          id.startsWith("react-dom/")
-        ) {
-          return true;
-        }
-        return false;
-      },
+      // 将所有peerDependencies设为external
+      external: [
+        "react",
+        "react-dom",
+        "react/jsx-runtime",
+        "react/jsx-dev-runtime",
+        "react-dom/client",
+        "react-dom/server",
+        // 所有peerDependencies
+        "classnames",
+        "dompurify",
+        "katex",
+        "lodash",
+        "react-markdown",
+        "react-syntax-highlighter",
+        "rehype-katex",
+        "rehype-raw",
+        "remark-gfm",
+        "remark-math",
+        "unist-util-visit-parents",
+      ],
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
           "react/jsx-runtime": "ReactJSXRuntime",
           "react/jsx-dev-runtime": "ReactJSXDevRuntime",
-          "react-dom/client": "ReactDOMClient",
-          "react-dom/server": "ReactDOMServer",
-        },
-        inlineDynamicImports: false,
-        manualChunks: undefined,
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name && assetInfo.name.endsWith(".css")) {
-            return "style.[hash].css";
-          }
-          return "[name].[hash][extname]";
+          classnames: "classNames",
+          dompurify: "DOMPurify",
+          katex: "katex",
+          lodash: "_",
+          "react-markdown": "ReactMarkdown",
+          "react-syntax-highlighter": "ReactSyntaxHighlighter",
+          "rehype-katex": "rehypeKatex",
+          "rehype-raw": "rehypeRaw",
+          "remark-gfm": "remarkGfm",
+          "remark-math": "remarkMath",
+          "unist-util-visit-parents": "unistUtilVisitParents",
         },
       },
     },
