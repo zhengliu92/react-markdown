@@ -886,6 +886,96 @@ $$`,
   },
 };
 
+// 测试代码块背景色功能
+export const CodeBlockBackgroundTest: Story = {
+  args: {
+    content: `# 代码块背景色测试
+
+这个示例专门测试 \`codeBlock.backgroundColor\` 是否正常工作。
+
+## 测试用例 1：JavaScript 代码
+
+\`\`\`javascript
+function testBackgroundColor() {
+  console.log("这个代码块应该有 #f0f0f0 的背景色");
+  return "如果您看到灰色背景，说明修复成功！";
+}
+
+// 测试更多代码
+const config = {
+  backgroundColor: '#f0f0f0',
+  borderRadius: '8px',
+  padding: '16px'
+};
+\`\`\`
+
+## 测试用例 2：Python 代码
+
+\`\`\`python
+def test_background():
+    """这个Python代码块也应该有相同的背景色"""
+    print("背景色应该是浅灰色 #f0f0f0")
+    return True
+
+# 如果背景色显示正确，说明问题已解决
+if __name__ == "__main__":
+    test_background()
+\`\`\`
+
+## 测试用例 3：CSS 代码
+
+\`\`\`css
+/* 这是CSS代码块测试 */
+.code-block {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 16px;
+  font-family: 'Courier New', monospace;
+}
+
+/* 如果这个代码块有正确的背景色，修复就成功了 */
+\`\`\`
+
+## 行内代码测试
+
+这是行内代码：\`console.log("测试")\` 和 \`background-color: #f0f0f0\`
+
+## 期望结果
+
+- ✅ 代码块应该有浅灰色（#f0f0f0）背景
+- ✅ 语法高亮应该正常工作  
+- ✅ 内容应该清晰可读`,
+    styleConfig: {
+      backgroundColor: "#ffffff",
+      color: "#333333",
+      padding: "32px",
+      fontFamily: "'Inter', -apple-system, sans-serif",
+      codeBlock: {
+        backgroundColor: "#f0f0f0",
+        borderRadius: "8px",
+        padding: "16px",
+        fontSize: "14px",
+        fontFamily: "'Courier New', monospace",
+      },
+      inlineCode: {
+        backgroundColor: "#e8e8e8",
+        color: "#d63384",
+        padding: "2px 6px",
+        borderRadius: "4px",
+        fontSize: "0.9em",
+      },
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "这个故事专门用于测试 codeBlock.backgroundColor 配置是否正常工作。代码块应该显示 #f0f0f0 的浅灰色背景。",
+      },
+    },
+  },
+};
+
 // 性能测试示例（大量内容）
 export const PerformanceTest: Story = {
   args: {

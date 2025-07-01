@@ -16,7 +16,7 @@
     color: #666;
   }
 
-  // 代码块样式
+  // 代码块样式 - 降低优先级，让内联样式优先
   :global(code) {
     background-color: #f5f5f5;
     padding: 2px 4px;
@@ -25,7 +25,7 @@
     font-size: 0.9em;
   }
 
-  // 预格式化代码块
+  // 预格式化代码块 - 降低优先级，让内联样式优先  
   :global(pre) {
     background-color: #f8f8f8;
     border: 1px solid #e1e1e1;
@@ -38,6 +38,13 @@
       background-color: transparent;
       padding: 0;
       font-size: 14px;
+    }
+  }
+
+  // 确保自定义样式的代码块容器有更高优先级
+  :global(div[style*="background"]) {
+    :global(code) {
+      background-color: inherit !important;
     }
   }
 

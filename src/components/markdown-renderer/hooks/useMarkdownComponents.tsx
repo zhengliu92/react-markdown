@@ -66,6 +66,11 @@ export const useMarkdownComponents = ({
                 PreTag="div"
                 language={match[1]}
                 wrapLongLines
+                customStyle={{
+                  backgroundColor: "transparent",
+                  margin: 0,
+                  padding: 0,
+                }}
               >
                 {String(children).replace(/\n$/, "")}
               </SyntaxHighlighter>
