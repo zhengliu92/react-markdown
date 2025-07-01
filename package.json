@@ -1,6 +1,6 @@
 {
   "name": "markdown-renderer-react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/markdown-renderer-react.umd.js",
   "module": "dist/markdown-renderer-react.es.js",
   "types": "dist/index.d.ts",
