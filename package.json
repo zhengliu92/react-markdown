@@ -1,8 +1,8 @@
 {
-  "name": "react-markdown",
+  "name": "markdown-renderer-react",
   "version": "1.0.0",
-  "main": "dist/react-markdown.umd.js",
-  "module": "dist/react-markdown.es.js",
+  "main": "dist/markdown-renderer-react.umd.js",
+  "module": "dist/markdown-renderer-react.es.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -25,12 +25,12 @@
   "description": "一个功能强大、可定制的 React Markdown 渲染组件，支持语法高亮、数学公式、HTML 渲染和多种主题样式。",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zhengliu92/react-markdown.git"
+    "url": "https://github.com/zhengliu92/markdown-renderer-react.git"
   },
   "bugs": {
-    "url": "https://github.com/zhengliu92/react-markdown/issues"
+    "url": "https://github.com/zhengliu92/markdown-renderer-react/issues"
   },
-  "homepage": "https://github.com/zhengliu92/react-markdown#readme",
+  "homepage": "https://github.com/zhengliu92/markdown-renderer-react#readme",
   "peerDependencies": {
     "classnames": "^2.5.1",
     "dompurify": "^3.2.6",

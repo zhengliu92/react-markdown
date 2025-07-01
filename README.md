@@ -18,15 +18,15 @@ English | [中文](README-zh.md)
 ## 📦 Installation
 
 ```bash
-npm install react-markdown
+npm install markdown-renderer-react
 # or
-yarn add react-markdown
+yarn add markdown-renderer-react
 ```
 
 ## 🚀 Quick Start
 
 ```tsx
-import { MarkdownRenderer } from 'react-markdown';
+import { MarkdownRenderer } from 'markdown-renderer-react';
 
 function App() {
   const content = `
@@ -112,8 +112,8 @@ Math formula: $E = mc^2$
 Import and use predefined themes:
 
 ```tsx
-import { MarkdownRenderer } from 'react-markdown';
-import { darkTheme, academicTheme, modernMinimalTheme } from 'react-markdown/examples';
+import { MarkdownRenderer } from 'markdown-renderer-react';
+import { darkTheme, academicTheme, modernMinimalTheme } from 'markdown-renderer-react/examples';
 
 <MarkdownRenderer content={content} styleConfig={darkTheme} />
 ```

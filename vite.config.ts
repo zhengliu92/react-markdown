@@ -20,8 +20,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/index.ts",
-      name: "ReactMarkdown",
-      fileName: (format) => `react-markdown.${format}.js`,
+      name: "MarkdownRendererReact",
+      fileName: (format) => `markdown-renderer-react.${format}.js`,
     },
     cssCodeSplit: false,
     rollupOptions: {

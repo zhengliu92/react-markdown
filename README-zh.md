@@ -18,15 +18,15 @@
 ## 📦 安装
 
 ```bash
-npm install react-markdown
+npm install markdown-renderer-react
 # 或
-yarn add react-markdown
+yarn add markdown-renderer-react
 ```
 
 ## 🚀 快速开始
 
 ```tsx
-import { MarkdownRenderer } from 'react-markdown';
+import { MarkdownRenderer } from 'markdown-renderer-react';
 
 function App() {
   const content = `
@@ -112,8 +112,8 @@ console.log('Hello, World!');
 导入并使用预定义主题：
 
 ```tsx
-import { MarkdownRenderer } from 'react-markdown';
-import { darkTheme, academicTheme, modernMinimalTheme } from 'react-markdown/examples';
+import { MarkdownRenderer } from 'markdown-renderer-react';
+import { darkTheme, academicTheme, modernMinimalTheme } from 'markdown-renderer-react/examples';
 
 <MarkdownRenderer content={content} styleConfig={darkTheme} />
 ```
